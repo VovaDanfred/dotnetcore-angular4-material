@@ -9,6 +9,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {
     MdButtonModule,
+    MdIconModule
 } from '@angular/material';
 export const sharedConfig: NgModule = {
     bootstrap: [AppComponent],
@@ -28,7 +29,7 @@ export const sharedConfig: NgModule = {
             { path: '**', redirectTo: 'home' }
         ]),
         NoopAnimationsModule,
-        MdButtonModule
-        
+        MdButtonModule,
+        MdIconModule
     ]
 };

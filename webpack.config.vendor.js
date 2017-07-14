@@ -27,7 +27,7 @@ module.exports = (env) => {
                 '@angular/platform-browser/animations',
                 '@angular/router',
                 'bootstrap',
-                '@angular/material/prebuilt-themes/deeppurple-amber.css',
+                '@angular/material/prebuilt-themes/indigo-pink.css',
                 'bootstrap/dist/css/bootstrap.css',
                 'es6-shim',
                 'es6-promise',
