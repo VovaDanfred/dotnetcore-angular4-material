@@ -1,21 +1,21 @@
+import { NavBarModule } from './components/navbar/navbar.module';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component'
-import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {
     MdButtonModule,
-    MdIconModule
+    MdIconModule,
+    MdToolbarModule
 } from '@angular/material';
 export const sharedConfig: NgModule = {
     bootstrap: [AppComponent],
     declarations: [
         AppComponent,
-        NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
         HomeComponent
@@ -30,6 +30,8 @@ export const sharedConfig: NgModule = {
         ]),
         NoopAnimationsModule,
         MdButtonModule,
-        MdIconModule
+        MdIconModule,
+        MdToolbarModule,
+        NavBarModule
     ]
 };
