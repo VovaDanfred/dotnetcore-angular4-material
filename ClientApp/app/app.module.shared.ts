@@ -1,3 +1,4 @@
+import { FooterModule } from './components/footer/footer.module';
 import { NavBarModule } from './components/navbar/navbar.module';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -32,6 +33,7 @@ export const sharedConfig: NgModule = {
         MdButtonModule,
         MdIconModule,
         MdToolbarModule,
-        NavBarModule
+        NavBarModule,
+        FooterModule
     ]
 };
