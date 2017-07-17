@@ -1,5 +1,7 @@
 @import '../node_modules/@angular/material/theming';
 @import '../ClientApp/app/components/navbar/navbar-theme.scss';
+@import '../ClientApp/app/components/home/home-theme.scss';
+@import '../ClientApp/app/components/footer/footer-theme.scss';
 
 // Styles for the docs app that are based on the current theme.
 @mixin app-theme($theme) {
@@ -27,5 +29,7 @@
   }
 
   @include nav-bar-theme($theme);
+  @include home-theme($theme);
+  @include footer-theme($theme);
 }
 

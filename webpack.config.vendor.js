@@ -10,7 +10,7 @@ module.exports = (env) => {
 
     const extractSass = new ExtractTextPlugin({
         filename: "vendor.css",
-        disable: true
+        disable: false
     });
 
     const sharedConfig = {
@@ -103,7 +103,7 @@ module.exports = (env) => {
         module: {
             rules: [
                 {
-                    test: /\.(css|scss)(\?|$)/, use: extractCSS.extract({
+                    test: /\.(css|scss)(\?|$)/, use: extractSass.extract({
                         use: [
                             {
                                 loader: 'raw-loader'

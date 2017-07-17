@@ -11,7 +11,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {
     MdButtonModule,
     MdIconModule,
-    MdToolbarModule
+    MdCardModule,
 } from '@angular/material';
 export const sharedConfig: NgModule = {
     bootstrap: [AppComponent],
@@ -32,7 +32,7 @@ export const sharedConfig: NgModule = {
         NoopAnimationsModule,
         MdButtonModule,
         MdIconModule,
-        MdToolbarModule,
+        MdCardModule,
         NavBarModule,
         FooterModule
     ]
