@@ -6,10 +6,10 @@ const merge = require('webpack-merge');
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
 
-    const extractCSS = new ExtractTextPlugin('vendor.css');
+    // const extractCSS = new ExtractTextPlugin('vendor.css');
 
     const extractSass = new ExtractTextPlugin({
-        filename: "vendor.css",
+        filename: "[name].css",
         disable: false
     });
 
@@ -42,9 +42,22 @@ module.exports = (env) => {
                 'zone.js',
                 '@angular/material',
                 '@angular/cdk',
+
+            ],
+            site: ['./Styles/main.scss'],
+            deeppurpleAmber: [
+                './ClientApp/assets/custom-themes/deeppurple-amber.scss',
+            ],
+            indigoPink: [
                 '@angular/material/prebuilt-themes/indigo-pink.css',
-                './Styles/main.scss'
-            ]
+            ],
+            
+            purpleGreen: [
+                '@angular/material/prebuilt-themes/purple-green.css',
+            ],
+            pinkBluegrey: [
+                '@angular/material/prebuilt-themes/pink-bluegrey.css',
+            ],
         },
         output: {
             publicPath: '/dist/',

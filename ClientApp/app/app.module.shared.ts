@@ -1,3 +1,4 @@
+import { ThemePickerModule } from './components/theme-picker';
 import { FooterModule } from './components/footer/footer.module';
 import { NavBarModule } from './components/navbar/navbar.module';
 import { NgModule } from '@angular/core';
@@ -34,6 +35,7 @@ export const sharedConfig: NgModule = {
         MdIconModule,
         MdCardModule,
         NavBarModule,
-        FooterModule
+        FooterModule,
+        ThemePickerModule
     ]
 };

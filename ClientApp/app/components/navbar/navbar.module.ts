@@ -1,3 +1,4 @@
+import { ThemePickerModule } from './../theme-picker/theme-picker';
 import {Component, NgModule} from '@angular/core';
 import {MdButtonModule} from '@angular/material';
 import {RouterModule} from '@angular/router';
@@ -10,7 +11,7 @@ import {RouterModule} from '@angular/router';
 export class NavBar {}
 
 @NgModule({
-  imports: [MdButtonModule, RouterModule],
+  imports: [MdButtonModule, RouterModule, ThemePickerModule],
   exports: [NavBar],
   declarations: [NavBar],
 })
