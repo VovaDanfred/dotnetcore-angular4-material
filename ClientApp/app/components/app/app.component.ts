@@ -1,3 +1,4 @@
+import { NavBarConfig } from './../../../shared/navbar/navbar-config';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, NavigationStart } from "@angular/router";
 
@@ -9,11 +10,11 @@ import { Router, NavigationStart } from "@angular/router";
 })
 export class AppComponent {
     showShadow = false;
-    constructor(router: Router) {
+    constructor(router: Router, public navBarConfig: NavBarConfig) {
         let previousRoute = router.routerState.snapshot.url;
 
         router.events.subscribe((data: NavigationStart) => {
-            this.showShadow = data.url.startsWith('/counter');
+            this.showShadow = data.url.indexOf('/home') != 0 && !(data.url === "/");
 
             // We want to reset the scroll position on navigation except when navigating within
             // the documentation for a single component.
@@ -25,6 +26,7 @@ export class AppComponent {
         });
     }
 }
+
 function isNavigationWithinComponentView(oldUrl: string, newUrl: string) {
     const componentViewExpression = /counter\/(\w+)/;
     return oldUrl && newUrl

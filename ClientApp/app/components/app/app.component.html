@@ -11,5 +11,5 @@
     </div>
 </div> -->
 
-<app-navbar [class.mat-elevation-z6]="showShadow"></app-navbar>
+<app-navbar *ngIf="!navBarConfig.isHidden" [class.mat-elevation-z6]="showShadow"></app-navbar>
 <router-outlet></router-outlet>

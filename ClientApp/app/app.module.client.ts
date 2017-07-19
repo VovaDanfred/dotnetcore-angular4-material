@@ -1,3 +1,4 @@
+import { NavBarConfig } from './../shared/navbar/navbar-config';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -26,6 +27,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
         {
             provide: 'FLICKR_SECRET', useValue: 'c3fd6eadc64e486b'
         },
+        NavBarConfig
     ]
 })
 export class AppModule {

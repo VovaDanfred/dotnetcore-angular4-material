@@ -1,3 +1,4 @@
+import { NavBarConfig } from './../../../shared/navbar/navbar-config';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
     styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent {
+    constructor(public navBarConfig: NavBarConfig){
+        navBarConfig.isHidden = false;
+    }
 }

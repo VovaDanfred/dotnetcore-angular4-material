@@ -1,3 +1,5 @@
+import { NavBarConfig } from './../shared/navbar/navbar-config';
+import { SideNavComponent, SideNavModule } from './components/sidenav/sidenav';
 import { ThemePickerModule } from './components/theme-picker';
 import { FooterModule } from './components/footer/footer.module';
 import { NavBarModule } from './components/navbar/navbar.module';
@@ -26,8 +28,18 @@ export const sharedConfig: NgModule = {
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
+            {
+                path: 'counter', component: SideNavComponent,
+                children: [
+                    { path: '', component: CounterComponent }
+                ],
+            },
+            {
+                path: 'fetch-data', component: SideNavComponent,
+                children: [
+                    { path: '', component: FetchDataComponent }
+                ],
+            },
             { path: '**', redirectTo: 'home' }
         ]),
         NoopAnimationsModule,
@@ -36,6 +48,7 @@ export const sharedConfig: NgModule = {
         MdCardModule,
         NavBarModule,
         FooterModule,
-        ThemePickerModule
+        ThemePickerModule,
+        SideNavModule
     ]
 };

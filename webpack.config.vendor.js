@@ -42,21 +42,20 @@ module.exports = (env) => {
                 'zone.js',
                 '@angular/material',
                 '@angular/cdk',
-
             ],
             site: ['./Styles/main.scss'],
             deeppurpleAmber: [
                 './ClientApp/assets/custom-themes/deeppurple-amber.scss',
             ],
             indigoPink: [
-                '@angular/material/prebuilt-themes/indigo-pink.css',
+               './ClientApp/assets/custom-themes/indigo-pink.scss',
             ],
             
             purpleGreen: [
-                '@angular/material/prebuilt-themes/purple-green.css',
+               './ClientApp/assets/custom-themes/purple-green.scss',
             ],
             pinkBluegrey: [
-                '@angular/material/prebuilt-themes/pink-bluegrey.css',
+               './ClientApp/assets/custom-themes/pink-bluegrey.scss',
             ],
         },
         output: {
