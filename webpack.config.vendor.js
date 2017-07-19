@@ -8,7 +8,6 @@ module.exports = (env) => {
 
     const extractSass = new ExtractTextPlugin({
         filename: "[name].css",
-        disable: isDevBuild
     });
 
     const sharedConfig = {
