@@ -1,4 +1,3 @@
-import { NavBarConfig } from './../shared/navbar/navbar-config';
 import { SideNavComponent, SideNavModule } from './components/sidenav/sidenav';
 import { ThemePickerModule } from './components/theme-picker';
 import { FooterModule } from './components/footer/footer.module';

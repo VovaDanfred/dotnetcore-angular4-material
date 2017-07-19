@@ -1,10 +1,11 @@
-import { Component, ViewEncapsulation, ViewChild, OnInit, NgModule } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, OnInit, NgModule, Inject } from '@angular/core';
 import { MdSidenav, MdSidenavModule } from '@angular/material';
 import { Router, RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FooterModule } from './../footer/footer.module';
 import { PageHeaderModule } from './../page-header/page-header';
 import { SideNavItems } from './../../../shared/sidenav-items/sidenav-items';
+import { PLATFORM_ID } from '@angular/core';
 
 const SMALL_WIDTH_BREAKPOINT = 840;
 
@@ -15,9 +16,11 @@ const SMALL_WIDTH_BREAKPOINT = 840;
   encapsulation: ViewEncapsulation.None,
 })
 export class SideNavComponent implements OnInit {
-  constructor(
-    public sideNavItems: SideNavItems,
-    private _router: Router) { }
+  isBrowser: boolean;
+
+  constructor(public sideNavItems: SideNavItems, private _router: Router, @Inject(PLATFORM_ID) _platformId: string) {
+    this.isBrowser = isPlatformBrowser(_platformId);
+  }
 
   @ViewChild(MdSidenav) sidenav: MdSidenav;
 
@@ -30,7 +33,10 @@ export class SideNavComponent implements OnInit {
   }
 
   isScreenSmall(): boolean {
-    return window.matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`).matches;
+    if (this.isBrowser) {
+      return window.matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`).matches;
+    }
+    return false;
   }
 }
 

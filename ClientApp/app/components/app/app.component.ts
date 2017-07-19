@@ -1,4 +1,3 @@
-import { NavBarConfig } from './../../../shared/navbar/navbar-config';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, NavigationStart } from "@angular/router";
 
@@ -10,7 +9,7 @@ import { Router, NavigationStart } from "@angular/router";
 })
 export class AppComponent {
     showShadow = false;
-    constructor(router: Router, public navBarConfig: NavBarConfig) {
+    constructor(router: Router) {
         let previousRoute = router.routerState.snapshot.url;
 
         router.events.subscribe((data: NavigationStart) => {

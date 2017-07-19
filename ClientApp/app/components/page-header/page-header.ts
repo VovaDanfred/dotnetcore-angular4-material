@@ -1,4 +1,3 @@
-import { ThemePickerModule } from './../theme-picker/theme-picker';
 import {Component, EventEmitter, NgModule, Output} from '@angular/core';
 import 'rxjs/add/operator/first';
 import { ComponentPageTitle } from './../../../shared/page-title/page-title';
@@ -20,7 +19,7 @@ export class PageHeaderComponent {
 }
 
 @NgModule({
-  imports: [MdButtonModule, MdIconModule, ThemePickerModule],
+  imports: [MdButtonModule, MdIconModule],
   exports: [PageHeaderComponent],
   declarations: [PageHeaderComponent],
   providers: [ComponentPageTitle],

@@ -21,15 +21,11 @@ h1 {
   margin: 8px;
   min-width: 64px;
   display: none;
-  // @media (max-width: $small-breakpoint-width) {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  // }
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @media (max-width: $small-breakpoint-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   md-icon {
     font-size: 30px;
@@ -38,8 +34,4 @@ h1 {
     line-height: 64px;
     color: white;
   }
-}
-
-.flex-spacer{
-   flex-grow: 1;
 }

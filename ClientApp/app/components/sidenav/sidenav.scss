@@ -81,6 +81,11 @@ app-sidenav {
   display: flex;
   flex-direction: column;
 
+  .sidenav-content-wrapper{
+      padding: 20px 70px 50px;
+      flex-grow: 1;
+  }
+
   // The rule will match the element following the router-outlet which will be the routed component.
   router-outlet + * {
     flex-grow: 1;

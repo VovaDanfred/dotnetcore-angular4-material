@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavBarConfig } from './../../../shared/navbar/navbar-config';
 import { ComponentPageTitle } from './../../../shared/page-title/page-title';
 
 @Component({
@@ -8,9 +7,8 @@ import { ComponentPageTitle } from './../../../shared/page-title/page-title';
     styleUrls:["./counter.component.scss"]
 })
 export class CounterComponent {
-    constructor(public _componentPageTitle: ComponentPageTitle, public navBarConfig: NavBarConfig){
+    constructor(public _componentPageTitle: ComponentPageTitle){
         _componentPageTitle.title = "Counter";
-        navBarConfig.isHidden = true;
     }
     public currentCount = 0;
 
