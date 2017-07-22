@@ -19,8 +19,16 @@
       color: mat-color($primary);
     }
 
-    .homepage-row {
+    .homepage-row,
+    .mat-typography {
       color: mat-color($foreground, secondary-text);
     }
+    .mat-typography {
+      line-height: 2;
+      a {
+        color: mat-color($primary);
+      }
+    }
+    
   }
 }
