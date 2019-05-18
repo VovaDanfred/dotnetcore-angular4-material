@@ -1,4 +1,4 @@
-# dotnetcore-angular4-material
+# Angular SPA on .NET Core 
 .NET Core SPA (Angular 4) with Material 2 Starter
 
 ## Preview
